@@ -12,10 +12,11 @@ import { Event } from 'src/app/models/Event';
 export class WarsztatyComponent implements OnInit {
 
   events!: Observable<Event[]>
-  constructor(private eventService: EventsService) { }
+  constructor(private eventsService: EventsService) { }
 
   ngOnInit(): void {
-    this.events = this.eventService.getEvents();
+    this.events = this.eventsService.getEvents();
+    console.log(this.events);
   }
 
 }
