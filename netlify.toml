@@ -1,0 +1,13 @@
+[build]
+  command = "npm run prerender"
+  functions = "./functions"
+  publish = "dist/drwa/browser"
+[dev]
+  command = "npm run start"
+  functions = "./functions"
+  publish = "src"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

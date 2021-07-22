@@ -45,9 +45,13 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/backend/config/*
-/backend/plugins/*
-/backend/node_modules/*
-/backend/static/*
+/backend/config
+/backend/plugins
+/backend/node_modules
+/backend/static
+/backend/dist
 
 /.vscode
+
+# Local Netlify folder
+.netlify
