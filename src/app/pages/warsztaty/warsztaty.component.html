@@ -1,1 +1,19 @@
-<p>warsztaty works!</p>
+<div class="blog">
+  <main
+    *ngIf="events | async as events; else loadingBlock"
+  >
+    <app-news-cover
+      class="post-item"
+      *ngFor="let event of events"
+      [post]="event"
+    >
+      {{ event.name }}
+    </app-news-cover>
+  </main>
+
+  <ng-template #loadingBlock>
+    <p>
+      Loading...
+    </p>
+ </ng-template>
+</div>
