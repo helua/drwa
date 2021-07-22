@@ -27,7 +27,7 @@ import { PartnersComponent } from './pages/main/partners/partners.component';
     PartnersComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
