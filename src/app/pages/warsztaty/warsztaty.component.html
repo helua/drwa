@@ -2,13 +2,13 @@
   <main
     *ngIf="events | async as events; else loadingBlock"
   >
-    <app-news-cover
+    <app-cover
       class="post-item"
       *ngFor="let event of events"
-      [post]="event"
+      [event]="event"
     >
       {{ event.name }}
-    </app-news-cover>
+    </app-cover>
   </main>
 
   <ng-template #loadingBlock>
