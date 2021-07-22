@@ -1,0 +1,45 @@
+$color: #945D5E;
+$contrast: #37123C;
+$mild: #dda77b;
+$mild2: #71677c;
+$neutral: #a99f96;
+$white: #fdfadf;
+
+.active{
+  color: $contrast;
+}
+nav{
+  & *{
+      z-index: 10;
+  }
+  & ul{
+      padding: 0;
+  }
+  & li{
+      text-decoration: none;
+      list-style-type: none;
+      // background-color: $contrast;
+
+      & a{
+          padding: 2px;
+
+      }
+  }
+}
+
+nav .nav-main{
+  display: inline-block;
+  width: 90%;
+  position: fixed;
+  top: 10px;
+  left: 5%;
+
+
+  & ul{
+      display: flex;
+      justify-content: space-between;
+  }
+  & a{
+      transition: .2s ease-out;
+  }
+}

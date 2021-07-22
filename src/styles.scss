@@ -1,0 +1,45 @@
+// @mixin colors{
+  $color: #945D5E;
+  $contrast: #37123C;
+  $mild: #dda77b;
+  $mild2: #71677c;
+  $neutral: #a99f96;
+  $white: #fdfadf;
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    margin: 0px;
+    background-color: $white;
+
+    & ::selection{
+        background-color: $mild;
+        color: $contrast;
+    }
+}
+
+a{
+  text-transform: lowercase;
+  text-decoration: none;
+  color: $color;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+p{
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: .1rem;
+  word-spacing: .2rem;
+}
+
+.router-wrapper{
+  margin: 86px 0;
+}
+
+
+

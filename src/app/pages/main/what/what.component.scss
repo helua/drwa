@@ -1,0 +1,13 @@
+.what{
+  padding-top: 5rem;
+  width: 100%;
+}
+.col{
+  width: 30%;
+  margin-left:3.333333%;
+  display: inline-block;
+  text-align: center;
+  & span{
+    font-size: 70px;
+  }
+}

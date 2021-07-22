@@ -1,0 +1,20 @@
+$color: #945D5E;
+$contrast: #37123C;
+$mild: #dda77b;
+$mild2: #71677c;
+$neutral: #a99f96;
+$white: #fdfadf;
+
+.cover{
+  background-color: $contrast;
+  width: 100%;
+  height: 90vh;
+  & .cover-h{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    & h1,h2{
+      color: $white;
+    }
+  }
+}

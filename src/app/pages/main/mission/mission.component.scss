@@ -1,0 +1,32 @@
+$color: #945D5E;
+$contrast: #37123C;
+$mild: #dda77b;
+$mild2: #71677c;
+$neutral: #a99f96;
+$white: #fdfadf;
+.mission{
+  width: 100%;
+  margin-top: 5rem;
+}
+h2{
+  text-align: center;
+}
+.col-2
+{
+  display: inline-block;
+  background-color: $contrast;
+  margin-left: 18%;
+  width: 40%;
+  height: 400px;
+
+}
+
+.col-1{
+  display: inline-block;
+  width: 20%;
+  height: 400px;
+  vertical-align: top;
+  margin-left: 4%;
+
+}
+
