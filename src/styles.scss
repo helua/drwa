@@ -1,10 +1,4 @@
-// @mixin colors{
-  $color: #945D5E;
-  $contrast: #37123C;
-  $mild: #dda77b;
-  $mild2: #71677c;
-  $neutral: #a99f96;
-  $white: #fdfadf;
+  @import './sass/styles';
 
 
 body{
@@ -36,9 +30,16 @@ p{
   letter-spacing: .1rem;
   word-spacing: .2rem;
 }
+h2{
+  padding-bottom: 5vh;
+}
 
 .router-wrapper{
-  margin: 86px 0;
+  margin: 86px 0 70rem 0;
+}
+
+.section{
+  margin-top: 10vh;
 }
 
 
