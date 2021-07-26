@@ -16,6 +16,7 @@ import { MainComponent } from './pages/main/main.component';
 import { RealizacjeComponent } from './pages/realizacje/realizacje.component';
 import { KontaktComponent } from './pages/kontakt/kontakt.component';
 import { WiedzaComponent } from './pages/wiedza/wiedza.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { WiedzaComponent } from './pages/wiedza/wiedza.component';
     WhatComponent,
     MissionComponent,
     PartnersComponent,
-    CoverComponent
+    CoverComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

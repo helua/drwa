@@ -1,0 +1,33 @@
+$color: #945D5E;
+$contrast: #37123C;
+$mild: #dda77b;
+$mild2: #71677c;
+$neutral: #a99f96;
+$white: #fdfadf;
+
+.button-holder{
+  position: relative;
+  width: 100%;
+  height: 4rem;
+}
+
+.button{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: $contrast;
+  color: $neutral;
+  text-transform: uppercase;
+  min-width: 30%;
+  text-align: center;
+  vertical-align: bottom;
+  transition: .2s ease-in-out;
+  &:hover{
+    background-color: $mild2;
+    color: $contrast;
+    transform: scale(1.1);
+    box-shadow: $mild -5px -5px;
+  }
+}
