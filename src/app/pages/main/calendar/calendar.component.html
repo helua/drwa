@@ -1,0 +1,13 @@
+<div class="section calendar">
+  <h2>kalendarz</h2>
+
+  <ul *ngIf="events | async as events; else loadingBlock">
+    <li *ngFor="let event of events">{{ event.title }}, {{ event.start | date }} - {{ event.end | date}}</li>
+  </ul>
+
+  <ng-template #loadingBlock>
+    <p>
+      Loading...
+    </p>
+  </ng-template>
+</div>

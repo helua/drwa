@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EventsService } from 'src/app/events.service';
-import { Event } from 'src/app/models/Event';
+import { Article } from 'src/app/models/Article';
 
 
 @Component({
@@ -11,12 +11,11 @@ import { Event } from 'src/app/models/Event';
 })
 export class WarsztatyComponent implements OnInit {
 
-  events!: Observable<Event[]>
+  articles!: Observable<Article[]>
   constructor(private eventsService: EventsService) { }
 
   ngOnInit(): void {
-    this.events = this.eventsService.getEvents();
-    console.log(this.events);
+    this.articles = this.eventsService.getArticles();
   }
 
 }

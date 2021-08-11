@@ -76,6 +76,25 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'articleTitle2',
+      title: 'Article title 2',
+      type: 'string',
+    },
+    {
+      name: 'articleSlug2',
+      title: 'Article slug 2',
+      type: 'slug',
+      options: {
+        source: 'articleTitle2',
+        maxLength: 96,
+      },
+    },
+    {
+      name: 'body2',
+      title: 'Body2',
+      type: 'blockContent',
+    },
   ],
 
   preview: {

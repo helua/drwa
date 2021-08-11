@@ -9,17 +9,20 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="event"] | order(title asc)';
+  const query = '*[_type=="event"]{articleTitle, "categories": categories->name, articleSlug, _createdAt, mainImage, "author": author->name}'
   console.log(query);
-  const events = await sanity.fetch(query).then((results) => {
-    const allEvents = results.map((event) => {
+  const articles = await sanity.fetch(query).then((results) => {
+    const allArticles = results.map((event) => {
       const output = {
-        start: event.eventStart,
-        end: event.eventEnd,
-        title: event.title,
-        slug: event.slug.current,
-        url: `${process.env.URL}/.netlify/functions/getEvents`,
+        url: `${process.env.URL}/.netlify/functions/getArticles`,
         categories: event.categories,
+        article: event.articleTitle,
+        // body: blocksToHtml({ blocks: event.body }),
+        articleSlug: event.articleSlug.current,
+        author: event.author,
+        createdAt: event._createdAt,
+        categories: event.categories
+
       };
       console.log(output);
 
@@ -33,13 +36,13 @@ exports.handler = async () => {
       }
       return output;
     });
-    console.log(allEvents);
-    return allEvents;
+    console.log(allArticles);
+    return allArticles;
   });
 
   return {
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(events),
+    body: JSON.stringify(articles),
   };
 };

@@ -1,16 +1,18 @@
 <div class="event-cover">
   <div class="holder">
+    <span class="event-date">
+      {{ article.createdAt | date }}
+    </span>
+    <div class="event-cover-image">
+      <img [src]="article.image" />
+    </div>
 
-
-    <span class="event-date">{{ event.createdAt}}</span>
-
-      <div class="event-cover-image">
-        <img [src]="event.image" />
-
-      </div>
-      <caption class="event-cover-title">
-        {{ event.name }}
-      </caption>
-
+    <caption class="event-cover-title">
+      {{ article.article }}
+    </caption>
+    <span>{{ article.author }}</span>
+     <!-- <span>{{ article.end | date }}</span><br>
+    <span>{{ article.title }}</span> -->
+    <!-- <span>{{ event.categories[0] }}</span> -->
   </div>
 </div>

@@ -1,9 +1,9 @@
 export interface Event {
-    createdAt: string;
-    id: string;
-    name: string;
+    slug: string;
+    title: string;
     url?: string;
     categories?: string;
-    body?: string;
     image: string;
+    start: Date;
+    end: Date;
   }

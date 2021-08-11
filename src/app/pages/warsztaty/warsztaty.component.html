@@ -1,13 +1,13 @@
 <div class="blog">
   <main
-    *ngIf="events | async as events; else loadingBlock"
+    *ngIf="articles | async as articles; else loadingBlock"
   >
     <app-cover
       class="post-item"
-      *ngFor="let event of events"
-      [event]="event"
+      *ngFor="let article of articles"
+      [article]="article"
     >
-      {{ event.name }}
+      {{ article.name }}
     </app-cover>
   </main>
 
