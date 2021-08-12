@@ -1,18 +1,8 @@
 export default {
-  name: 'event',
-  title: 'Event',
+  name: 'post',
+  title: 'Post',
   type: 'document',
   fields: [
-    {
-      name: 'eventStart',
-      title: 'Event starts at',
-      type: 'datetime',
-    },
-    {
-      name: 'eventEnd',
-      title: 'Event ends at',
-      type: 'datetime',
-    },
     {
       name: 'title',
       title: 'Title',
@@ -24,25 +14,6 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96,
-      },
-    },
-    {
-      name: 'registration',
-      title: 'Registration',
-      type: 'string',
-    },
-    {
-      name: 'articleTitle',
-      title: 'Article title',
-      type: 'string',
-    },
-    {
-      name: 'articleSlug',
-      title: 'Article slug',
-      type: 'slug',
-      options: {
-        source: 'articleTitle',
         maxLength: 96,
       },
     },
@@ -77,23 +48,9 @@ export default {
       type: 'blockContent',
     },
     {
-      name: 'articleTitle2',
-      title: 'Article title 2',
+      name: 'registration',
+      title: 'Registration',
       type: 'string',
-    },
-    {
-      name: 'articleSlug2',
-      title: 'Article slug 2',
-      type: 'slug',
-      options: {
-        source: 'articleTitle2',
-        maxLength: 96,
-      },
-    },
-    {
-      name: 'body2',
-      title: 'Body2',
-      type: 'blockContent',
     },
   ],
 

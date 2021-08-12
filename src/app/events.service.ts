@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Event } from './models/Event';
-import { Article } from './models/Article';
+import { Post } from './models/Post';
 
 @Injectable({
   providedIn: 'root',
@@ -11,8 +11,8 @@ import { Article } from './models/Article';
 export class EventsService {
   constructor(private http: HttpClient) {}
 
-  getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>('/.netlify/functions/getArticles', {
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>('/.netlify/functions/getPosts', {
       headers: {
         'Content-Type': 'application/json',
       },

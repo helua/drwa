@@ -1,6 +1,5 @@
 const sanityClient = require("@sanity/client");
 const imageUrlBuilder = require("@sanity/image-url");
-const blocksToHtml = require("@sanity/block-content-to-html");
 
 const sanity = sanityClient({
   projectId: process.env.SANITY_PROJECT_ID,
@@ -9,7 +8,7 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="event"] | order(title asc)';
+  const query = '*[_type=="event"]{eventStart, eventEnd, title, slug, mainImage, categories, "organiser": organiser->name} | order(title asc)';
   console.log(query);
   const events = await sanity.fetch(query).then((results) => {
     const allEvents = results.map((event) => {
@@ -20,6 +19,7 @@ exports.handler = async () => {
         slug: event.slug.current,
         url: `${process.env.URL}/.netlify/functions/getEvents`,
         categories: event.categories,
+        organiser: event.organiser
       };
       console.log(output);
 

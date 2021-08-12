@@ -1,5 +1,5 @@
 import { AfterViewChecked, Component, Input, OnInit } from '@angular/core';
-import { Article } from '../../../models/Article';
+import { Post } from '../../../models/Post';
 
 @Component({
   selector: 'app-cover',
@@ -8,7 +8,7 @@ import { Article } from '../../../models/Article';
 })
 export class CoverComponent implements OnInit, AfterViewChecked {
 
-  @Input() article!: Article;
+  @Input() post!: Post;
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class CoverComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked(): void{
-    console.log(this.article.categories + '  hejkaaaaa')
+    console.log(this.post + '  hejkaaaaa')
   }
 
 }

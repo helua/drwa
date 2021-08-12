@@ -6,4 +6,5 @@ export interface Event {
     image: string;
     start: Date;
     end: Date;
+    organiser: string;
   }

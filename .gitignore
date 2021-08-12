@@ -45,11 +45,17 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/backend/config
-/backend/plugins
-/backend/node_modules
-/backend/static
-/backend/dist
+/calendar/config
+/calendar/plugins
+/calendar/node_modules
+/calendar/static
+/calendar/dist
+
+/blog/config
+/blog/plugins
+/blog/node_modules
+/blog/static
+/blog/dist
 
 /.vscode
 

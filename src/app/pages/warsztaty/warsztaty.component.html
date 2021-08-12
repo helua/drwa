@@ -1,14 +1,19 @@
 <div class="blog">
   <main
-    *ngIf="articles | async as articles; else loadingBlock"
+    *ngIf="posts | async as posts; else loadingBlock"
   >
     <app-cover
       class="post-item"
-      *ngFor="let article of articles"
+      *ngFor="let post of posts"
+      [post]="post"
+    >
+    </app-cover>
+    <!-- <app-cover
+      class="post-item"
+      *ngFor="let article of articles2"
       [article]="article"
     >
-      {{ article.name }}
-    </app-cover>
+    </app-cover> -->
   </main>
 
   <ng-template #loadingBlock>

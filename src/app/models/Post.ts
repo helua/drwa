@@ -1,11 +1,11 @@
-export interface Article {
+export interface Post {
   createdAt: Date;
   url?: string;
   categories?: string;
   body?: string;
   image: string;
-  article: string;
-  articleSlug: string;
+  title: string;
+  slug: string;
   author?: string;
 
 }
