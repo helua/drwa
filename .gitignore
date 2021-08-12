@@ -57,6 +57,12 @@ Thumbs.db
 /blog/static
 /blog/dist
 
+/domki/config
+/domki/plugins
+/domki/node_modules
+/domki/static
+/domki/dist
+
 /.vscode
 
 # Local Netlify folder

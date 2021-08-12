@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { Product } from './models/Product';
 import { Event } from './models/Event';
 import { Post } from './models/Post';
 
@@ -27,6 +28,13 @@ export class EventsService {
     });
   }
 
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('/.netlify/functions/getProducts', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   // getPost(id) {
   //   console.log(id);

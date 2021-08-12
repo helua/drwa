@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Product } from '../../models/Product'
+import { EventsService } from 'src/app/events.service';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-realizacje',
   templateUrl: './realizacje.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RealizacjeComponent implements OnInit {
 
-  constructor() { }
+  products!: Observable<Product[]>
+
+  constructor(private eventsService: EventsService) { }
 
   ngOnInit(): void {
-  }
+    this.products = this.eventsService.getProducts();
 
+  }
 }

@@ -1,1 +1,13 @@
-<p>realizacje works!</p>
+<h1>realizacje</h1>
+<main *ngIf="products | async as products; else loadingBlock">
+  <div *ngFor="let product of products" style="width: 100%;">
+    <p >{{ product.title }}</p>
+  </div>
+</main>
+
+<ng-template #loadingBlock>
+  <p>
+    Loading...
+  </p>
+</ng-template>
+
