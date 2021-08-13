@@ -9,31 +9,29 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="post"]{title, slug, _createdAt}'
+  const query = '*[_type=="post"]{title, slug, _createdAt, mainImage, "author": author->name, "categoryTitles": categories[]->title, body}'
   console.log(query);
   const posts = await sanity.fetch(query).then((results) => {
     const allPosts = results.map((post) => {
       const output = {
         title: post.title,
         slug: post.slug.current,
-
-        // url: `${process.env.URL}/.netlify/functions/getposts`,
-        // categories: post.categories,
-        // body: blocksToHtml({ blocks: post.body }),
-        // author: post.author,
-        // createdAt: post._createdAt,
-        // categories: post.categories,
+        url: `${process.env.URL}/.netlify/functions/getPosts`,
+        categories: post.categoryTitles,
+        body: blocksToHtml({ blocks: post.body }),
+        author: post.author,
+        createdAt: post._createdAt,
       };
       console.log(output);
 
-      // const image =
-      // post.mainImage.asset
-      //     ? post.mainImage.asset._ref
-      //     : null;
+      const image =
+      post.mainImage.asset
+          ? post.mainImage.asset._ref
+          : null;
 
-      // if (image) {
-      //   output.image = imageUrlBuilder(sanity).image(image).url();
-      // }
+      if (image) {
+        output.image = imageUrlBuilder(sanity).image(image).url();
+      }
       return output;
     });
     console.log(allPosts);

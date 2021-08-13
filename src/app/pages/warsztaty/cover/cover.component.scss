@@ -1,5 +1,7 @@
+@import '../../../../sass/styles';
 
 .event-cover{
+  position: relative;
   width: 100%;
   & img{
     width: 100%;
@@ -23,5 +25,18 @@ caption.event-cover-title{
 }
 span{
   font-size: 10px;
+}
+.category-label{
+  position: relative;
+  background-color: #dda77b;
+  color: #37123c;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 2px;
+  display: inline-block;
+  margin: 2px;
+  top: 20px;
+
+
 }
 

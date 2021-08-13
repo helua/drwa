@@ -1,7 +1,7 @@
 export interface Post {
   createdAt: Date;
   url?: string;
-  categories?: string;
+  categories: string[];
   body?: string;
   image: string;
   title: string;

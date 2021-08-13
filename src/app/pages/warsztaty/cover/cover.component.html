@@ -4,6 +4,9 @@
       {{ post.createdAt | date }}
     </span>
     <div class="event-cover-image">
+
+        <div *ngFor="let category of categories" class="category-label">{{ category }}</div>
+      
       <img [src]="post.image" />
     </div>
 

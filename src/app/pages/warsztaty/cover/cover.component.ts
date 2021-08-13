@@ -9,14 +9,18 @@ import { Post } from '../../../models/Post';
 export class CoverComponent implements OnInit, AfterViewChecked {
 
   @Input() post!: Post;
+  categories?: string[];
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   ngAfterViewChecked(): void{
     console.log(this.post + '  hejkaaaaa')
+    this.categories = this.post.categories;
+    console.log(this.categories);
   }
 
 }
