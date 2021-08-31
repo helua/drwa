@@ -53,32 +53,22 @@
   }
 }
 
-.category-label{
+.label{
   position: relative;
-  background-color: $color;
-  color: $mild;
   border-radius: 2px;
   font-size: 12px;
   padding: 2px;
   display: inline-block;
   margin: 2px;
-  top: 22px;
-
-
 }
 
 .tag-label{
-  position: relative;
   background-color: $contrast;
   color: $mild2;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 2px;
-  display: inline-block;
-  margin: 2px;
-  top: 22px;
-
-
+}
+.category-label{
+  background-color: $color;
+  color: $mild;
 }
 
 
