@@ -7,7 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import category from './category'
 import product from './product'
-import vendor from './vendor'
+import investor from './investor'
 import productVariant from './productVariant'
 
 import localeString from './locale/String'
@@ -24,7 +24,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     product,
-    vendor,
+    investor,
     category,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

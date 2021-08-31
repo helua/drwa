@@ -1,5 +1,15 @@
 @import '../../../../sass/styles';
 
+
+span{
+  padding: 3px;
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  height: 15px;
+}
+
 .event-cover{
   position: relative;
   width: 100%;
@@ -13,19 +23,28 @@
   font-family: Palatino;
   font-size: 1rem;
   line-height: 1.5rem;
+  position: relative;
+  top:22px;
+  font-size: 12px;
 }
 
 .event-cover-image{
   width: 100%;
+  position: relative;
 }
 
 caption.event-cover-title{
   width: 100%;
-  display: inline;
+  position: relative;
+  mix-blend-mode: darken;
+  color: $contrast;
+  padding: 1px;
+  text-align: left;
+  font-size: 1rem;
+
+
 }
-span{
-  font-size: 10px;
-}
+
 .category-label{
   position: relative;
   background-color: #dda77b;
@@ -35,7 +54,7 @@ span{
   padding: 2px;
   display: inline-block;
   margin: 2px;
-  top: 20px;
+  top: 22px;
 
 
 }

@@ -1,0 +1,23 @@
+<div class="slideshow-onclick">
+
+  <div *ngFor="let slide of slides" class="mySlides fade" [class]="slidesId">
+    <div class="numbertext">{{slide.indexOf}} / {{slides.length}}</div>
+    <img [src]="slide.source" style="width:100%">
+    <!-- <div class="text">{{slide.name}}</div> -->
+  </div>
+
+  <!-- Next and previous buttons -->
+
+
+  <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+  <a class="next" (click)="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span *ngFor="let slide of slides" class="dot" (click)="currentSlide(slide.indexOf)"></span>
+</div>
+
+
+

@@ -1,0 +1,84 @@
+@import '../../../sass/styles';
+
+.holder{
+  width: 80%;
+  background-color: $mild2;
+  margin: 1rem auto;
+  height: 27rem;
+
+
+  & caption{
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  & p{
+    padding: .5rem;
+    font-size: .9rem;
+  }
+
+  & img{
+    width: 100%;
+    vertical-align: middle;
+
+  }
+  & .holder-info{
+    width: 40%;
+  }
+  & .holder-slides{
+    width: 60%;
+  }
+}
+
+.holder:nth-child(odd){
+  & .holder-col:nth-child(1){
+    float: left;
+    display: block;
+  }
+  & .holder-col:nth-child(2){
+    float: right;
+    display: block;
+  }
+}
+
+.holder:nth-child(even){
+  & .holder-col:nth-child(1){
+    float: right;
+    display: block;
+  }
+  & .holder-col:nth-child(2){
+    float: left;
+    display: block;
+  }
+}
+
+.category-label{
+  position: relative;
+  background-color: $color;
+  color: $mild;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 2px;
+  display: inline-block;
+  margin: 2px;
+  top: 22px;
+
+
+}
+
+.tag-label{
+  position: relative;
+  background-color: $contrast;
+  color: $mild2;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 2px;
+  display: inline-block;
+  margin: 2px;
+  top: 22px;
+
+
+}
+
+

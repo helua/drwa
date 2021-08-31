@@ -47,10 +47,10 @@ export default {
       },
     },
     {
-      name: 'vendor',
-      title: 'Vendor',
+      name: 'investor',
+      title: 'Investor',
       type: 'reference',
-      to: {type: 'vendor'},
+      to: {type: 'investor'},
     },
     {
       name: 'blurb',

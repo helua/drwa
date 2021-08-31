@@ -1,3 +1,9 @@
 .calendar{
-  text-align: center;
+  & h2{
+    text-align: center;
+  }
+  & ul{
+    text-align: left;
+    font-size: .8rem;
+  }
 }

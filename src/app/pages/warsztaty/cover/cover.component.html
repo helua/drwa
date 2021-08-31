@@ -1,21 +1,14 @@
 <div class="event-cover">
   <div class="holder">
     <span class="event-date">
-      {{ post.createdAt | date }}
+      {{ post.createdAt | date }}, autor: {{ post.author }}
     </span>
-    <div class="event-cover-image">
-
+      <div class="event-cover-image">
         <div *ngFor="let category of categories" class="category-label">{{ category }}</div>
-      
       <img [src]="post.image" />
     </div>
-
     <caption class="event-cover-title">
-      {{ post.title}}
+      {{ post.title }}
     </caption>
-    <span>{{ post.author }}</span><br>
-     <!-- <span>{{ post.end | date }}</span><br>
-    <span>{{ post.title }}</span> -->
-    <!-- <span>{{ event.categories[0] }}</span> -->
   </div>
 </div>

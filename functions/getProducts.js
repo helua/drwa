@@ -1,6 +1,7 @@
+const { stringify } = require("@angular/compiler/src/util");
 const sanityClient = require("@sanity/client");
 const imageUrlBuilder = require("@sanity/image-url");
-const blocksToHtml = require("@sanity/block-content-to-html");
+// const blocksToHtml = require("@sanity/block-content-to-html");
 
 const sanity = sanityClient({
   projectId: process.env.SANITY_PROJECT_ID_DOMKI,
@@ -9,33 +10,39 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="product"]{title, slug}'
+  const query = '*[_type=="product"]{title, slug, defaultProductVariant, tags, "categoryTitles": categories[]->title, "investor": investor->title}'
   console.log(query);
   const products = await sanity.fetch(query).then((results) => {
     const allProducts = results.map((product) => {
       const output = {
         title: product.title,
         slug: product.slug.current,
-
-        // url: `${process.env.URL}/.netlify/functions/getproducts`,
-        // categories: product.categories,
+        url: `${process.env.URL}/.netlify/functions/getproducts`,
+        categories: product.categoryTitles,
+        tags: product.tags,
+        investor: product.investor,
         // body: blocksToHtml({ blocks: product.body }),
-        // createdAt: product._createdAt,
-        // categories: product.categories,
+        images: [],
+        house: product.defaultProductVariant.housecolor,
+        gont: product.defaultProductVariant.gontcolor
       };
-      console.log(output);
 
-      // const image =
-      // product.mainImage.asset
-      //     ? product.mainImage.asset._ref
-      //     : null;
 
-      // if (image) {
-      //   output.image = imageUrlBuilder(sanity).image(image).url();
-      // }
+      for (let i = 0; i < product.defaultProductVariant.images.length; i++){
+
+        const image =
+        product.defaultProductVariant.images &&
+        product.defaultProductVariant.images.length > 0
+          ? product.defaultProductVariant.images[i].asset._ref
+          : null;
+
+        if (image) {
+          output.images[i] = imageUrlBuilder(sanity).image(image).url();
+        }
+      }
       return output;
     });
-    console.log(allProducts);
+
     return allProducts;
   });
 

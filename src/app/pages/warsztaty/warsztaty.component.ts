@@ -17,6 +17,7 @@ export class WarsztatyComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = this.eventsService.getPosts();
+    console.log('KUPAAA' + this.posts);
 
   }
 
