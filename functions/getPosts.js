@@ -9,7 +9,7 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="post"]{title, slug, _createdAt, mainImage, "author": author->name, "categoryTitles": categories[]->title, body}'
+  const query = '*[_type=="post"]{title, slug, _createdAt, mainImage, "author": author->name, "categoryTitles": categories[]->title}'
   console.log(query);
   const posts = await sanity.fetch(query).then((results) => {
     const allPosts = results.map((post) => {
@@ -18,7 +18,6 @@ exports.handler = async () => {
         slug: post.slug.current,
         url: `${process.env.URL}/.netlify/functions/getPosts`,
         categories: post.categoryTitles,
-        body: blocksToHtml({ blocks: post.body }),
         author: post.author,
         createdAt: post._createdAt,
       };

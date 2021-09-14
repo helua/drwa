@@ -6,11 +6,14 @@ import { MainComponent } from './pages/main/main.component';
 import { KontaktComponent } from './pages/kontakt/kontakt.component';
 import { RealizacjeComponent } from './pages/realizacje/realizacje.component';
 import { WiedzaComponent } from './pages/wiedza/wiedza.component';
+import { PostComponent } from './pages/warsztaty/post/post.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/ciesielstwo', pathMatch: 'full' },
   { path: 'ciesielstwo', component: MainComponent },
   { path: 'warsztaty', component: WarsztatyComponent },
+  { path: 'warsztaty/:id', component: PostComponent },
   { path: 'realizacje', component: RealizacjeComponent },
   { path: 'wiedza', component: WiedzaComponent },
   { path: 'kontakt', component: KontaktComponent },

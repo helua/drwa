@@ -7,10 +7,9 @@
   height: 27rem;
 
 
-  & caption{
+  & h2{
     font-size: 1.4rem;
-    width: 100%;
-    padding: 5px 0;
+    padding: .5rem;
   }
 
   & p{
@@ -24,7 +23,9 @@
 
   }
   & .holder-info{
-    width: 40%;
+    width: 35%;
+    height: 50%;
+    margin-top: 5%;
   }
   & .holder-slides{
     width: 60%;
@@ -39,6 +40,7 @@
   & .holder-col:nth-child(2){
     float: right;
     display: block;
+    border-left: solid 10px $contrast;
   }
 }
 
@@ -50,6 +52,9 @@
   & .holder-col:nth-child(2){
     float: left;
     display: block;
+    border-right: solid 10px $contrast;
+    text-align: right;
+
   }
 }
 

@@ -37,14 +37,17 @@ export class EventsService {
     });
   }
 
-  // getPost(id) {
-  //   console.log(id);
-  //   return this.http.get( `/.netlify/functions/getPost\?id=${id}`
-  //   , {
-  //     headers: {
-  //       'Content-Type': 'application/json; charset=utf-8',
-  //     },
-  //   });
-  // }
+  getPost(id) {
+    console.log(id);
+    return this.http.get( `/.netlify/functions/getPost\?id=${id}`
+    , {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        // 'Reffer-Policy': 'origin',
+        // 'Authorization': 'Bearer sknAMz65HppdnFiQD3UHDQx1R6Bbd9uZofibABd14HsNoa38UoJE3diWIPB7Qp61DAUmyD7QFcVzy797IEd7zt4GaYdGdI9NSeBlVjAhywekd7PPYHXspgTFMHJryRvO61cjZBUi9sZv03wYf8KUrHnFr1h6zsQuvoiI2kvvcR0MPXN2jXPc',
+        // 'Access-Control-Allow-Origin': 'https://10ugj9p1.api.sanity.io'
+      },
+    });
+  }
 
 }

@@ -25,6 +25,7 @@ import { WiedzaComponent } from './pages/wiedza/wiedza.component';
 import { LOCALE_ID } from '@angular/core';
 import localePl from '@angular/common/locales/pl';
 import { registerLocaleData } from '@angular/common';
+import { PostComponent } from './pages/warsztaty/post/post.component';
 
 registerLocaleData(localePl);
 
@@ -43,7 +44,8 @@ registerLocaleData(localePl);
     CoverComponent,
     ButtonComponent,
     CalendarComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

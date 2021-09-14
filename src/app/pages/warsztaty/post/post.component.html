@@ -1,0 +1,22 @@
+<div class="post-wrapper">
+  <span>{{ post.createdAt | date }}</span>
+
+  <div class="title-wrapper">
+
+      <h1>{{post.name}}</h1>
+      <div class="image-wrapper">
+        <img [src]="post.image" alt="">
+
+        <div *ngFor="let category of post.categories" class="category-label">{{ category }}</div>
+
+      </div>
+
+
+  </div>
+
+
+    <div class="body-wrapper" [innerHTML]="post.body"></div>
+    <button (click)="goToPosts()">&#8592;</button>
+
+</div>
+
