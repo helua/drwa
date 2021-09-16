@@ -50,7 +50,6 @@ export class SlideshowComponent implements AfterViewInit, OnInit{
     if (n < 1) {this.slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
-      // dots[i].className = 'dot '+this.slidesId;
     }
     for (i = 0; i < dotsCurrent.length; i++) {
       dotsCurrent[i].className = dotsCurrent[i].className.replace(' active', '');

@@ -5,17 +5,19 @@
 <!-- <main *ngIf="domki; else loadingBlock">
   <div *ngFor="let domek of domki" class="holder"> -->
     <div class="holder-col holder-slides">
+      <div class="decoration"></div>
       <app-slideshow [slidesId]="domek.slug" [slidesSet]="domek.images"></app-slideshow>
     </div>
     <div class="holder-col holder-info">
       <h2>{{ domek.title }}</h2>
-      <p>
-        inwestor: {{ domek.investor }}<br>
-        kolor domku: {{ domek.house }}<br>
-        kolor dachu: {{ domek.gont }} <br>
-      </p>
-        <p>kategoria:</p> <div *ngFor="let category of domek.categories" class="label category-label">{{ category }}</div><br>
-        <p>tagi:</p> <div *ngFor="let tag of domek.tags" class="label tag-label">{{ tag }}</div>
+      <ul>
+        <li>inwestor: {{ domek.investor }}</li>
+        <li>kolor domku: {{ domek.house }}</li>
+        <li>kolor dachu: {{ domek.gont }} </li>
+        <li>kategoria: <span *ngFor="let category of domek.categories" class="label category-label">{{ category }}</span></li>
+        <li>tagi:<span *ngFor="let tag of domek.tags" class="label tag-label">{{ tag }}</span></li>
+      </ul>
+       <br>
 
 
 

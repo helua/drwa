@@ -2,30 +2,36 @@
 
 .holder{
   width: 80%;
-  background-color: $mild2;
-  margin: 1rem auto;
+  background-color: $white;
+  margin: 4rem auto;
   height: 27rem;
-
-
-  & h2{
-    font-size: 1.4rem;
-    padding: .5rem;
-  }
-
   & p{
     padding: .5rem;
     font-size: .9rem;
   }
-
   & img{
     width: 100%;
     vertical-align: middle;
-
   }
   & .holder-info{
-    width: 35%;
-    height: 50%;
-    margin-top: 5%;
+    width: 39%;
+    height: 89%;
+    overflow: hidden;
+    & h2{
+      margin-top: $gap;//decoration
+      font-size: 1.6rem;
+      padding: 2rem 0 0 0;
+      margin: 0;
+    }
+    & ul{
+      padding: 1rem;
+      list-style: none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 100;
+      & li{
+        padding-bottom: 1rem;
+      }
+    }
   }
   & .holder-slides{
     width: 60%;
@@ -40,7 +46,14 @@
   & .holder-col:nth-child(2){
     float: right;
     display: block;
-    border-left: solid 10px $contrast;
+    border-left: 6px dashed $mild2;
+  }
+  & .holder-info{
+    margin: 0 0 5% 0;
+    & h2{
+      padding-left: 2rem;
+    }
+
   }
 }
 
@@ -52,28 +65,40 @@
   & .holder-col:nth-child(2){
     float: left;
     display: block;
-    border-right: solid 10px $contrast;
+    border-right: 6px dashed $mild2;
     text-align: right;
 
+  }
+  & .holder-info{
+    margin: 0 0 5% 0;
+    & h2{
+      padding-right: 2rem;
+    }
   }
 }
 
 .label{
   position: relative;
   border-radius: 2px;
-  font-size: 12px;
-  padding: 2px;
+  font-size: 1rem;
+  padding: 4px;
   display: inline-block;
-  margin: 2px;
+  margin: 0 4px;
 }
 
 .tag-label{
-  background-color: $contrast;
-  color: $mild2;
+  background-color: $mild;
+  color: $white;
 }
 .category-label{
-  background-color: $color;
-  color: $mild;
+  background-color: $mild2;
+  color: $white;
 }
 
+.decoration{
+  width: 35%;
+  height: $gap;
+  border-top: 6px dashed $mild2;
+  // background-color: $color;
 
+}

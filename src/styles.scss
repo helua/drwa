@@ -8,6 +8,7 @@ body{
     letter-spacing: .1rem;
     margin: 0px;
     background-color: $white;
+    box-sizing: content-box;
 
     & ::selection{
         background-color: $mild;
@@ -42,10 +43,14 @@ h2{
   margin-top: 10vh;
 }
 
-p, h1, h2, ul, ol{
-  padding: 0 5rem;
+p, h1, h2, ol{
+  padding: 0 1rem;
 
 }
+ul{
+  font-size: 1rem;
+}
+
 
 
 

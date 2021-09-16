@@ -3,6 +3,9 @@
       <div class="numbertext">{{slide.indexOf}} / {{slides.length}}</div>
       <img [src]="slide.source" style="width:100%">
       <!-- <div class="text">{{slide.name}}</div> -->
+
+      <!-- The dots/circles -->
+
   </div>
 
   <!-- Next and previous buttons -->
@@ -10,18 +13,20 @@
 
   <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
   <a class="next" (click)="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+  <div class="dots">
+    <span
+      *ngFor="let slide of slides"
+      class="dot"
+      (click)="currentSlide(slide.indexOf)"
+      [class]="'dot-'+slidesId">
+    </span>
+  </div>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span
-    *ngFor="let slide of slides"
-    class="dot"
-    (click)="currentSlide(slide.indexOf)"
-    [class]="'dot-'+slidesId">
-  </span>
+
 </div>
+
+
+
 
 
 
