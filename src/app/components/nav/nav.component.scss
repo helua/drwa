@@ -23,12 +23,13 @@ nav{
   }
 }
 
-nav .nav-main{
+nav #nav-main{
   display: inline-block;
   width: 90%;
   position: fixed;
   top: 10px;
   left: 5%;
+  transition: .4s;
 
 
   & ul{

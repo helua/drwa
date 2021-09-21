@@ -50,18 +50,23 @@ Thumbs.db
 /calendar/node_modules
 /calendar/static
 /calendar/dist
+/calendar/yarn.lock
 
 /blog/config
 /blog/plugins
 /blog/node_modules
 /blog/static
 /blog/dist
+/blog/yarn.lock
+
 
 /domki/config
 /domki/plugins
 /domki/node_modules
 /domki/static
 /domki/dist
+/domki/yarn.lock
+
 
 /.vscode
 
