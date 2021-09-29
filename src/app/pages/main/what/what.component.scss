@@ -2,11 +2,11 @@
 
 .what{
   width: 90%;
-  height: 553px;
+  height: 437px;
 
   @include respond(tab-land){
     width: 100%;
-    height: 403px;
+    height: 461px;
     overflow-x: scroll;
     display: flex;
     flex-direction: row;

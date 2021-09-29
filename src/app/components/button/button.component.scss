@@ -20,6 +20,9 @@
   vertical-align: bottom;
   transition: .2s ease-in-out;
   margin: 30px 0 10px;
+  @include respond(tab-land){
+    font-size: 1.16rem;
+  }
   @include respond(phone){
     bottom: 0;
     right: 0;

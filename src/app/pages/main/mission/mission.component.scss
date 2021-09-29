@@ -18,7 +18,7 @@ h2{
 .col-image
 {
   background-color: $contrast;
-  width: 55%;
+  width: 53%;
   height: 390px;
   @include respond(phone){
     margin-left: 0%;
@@ -30,9 +30,9 @@ h2{
 }
 
 .col-text{
-  width: 41%;
+  width: 39%;
   vertical-align: top;
-  margin-left: auto 4%;
+  margin-left: 8%;
   @include respond(phone){
     margin-left: 0%;
     width: 100%;
