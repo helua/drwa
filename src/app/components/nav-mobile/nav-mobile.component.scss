@@ -1,0 +1,64 @@
+
+@import '../../../sass/styles';
+
+.mat-list-item{
+  font-size: 1.5rem;
+  letter-spacing: .15rem;
+  margin-top: 7%;
+  & img{
+    height: 6rem;
+  }
+}
+.mat-list-item:hover{
+  background-color: $white;
+}
+
+fa-icon{
+  color: $contrast;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+a.active{
+  color: $contrast;
+
+}
+
+
+//mobile menu
+.mobile{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  & ul{
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0 1rem;
+
+  }
+
+  @media only screen and (min-width: 599px) {
+  display: none;
+  visibility: hidden;
+  }
+}
+.mat-sidenav{
+background-color: $white;
+}
+.mat-drawer{
+  position: fixed !important;
+  padding-top: 6rem;
+}
+.mat-drawer-container{
+  // background-color: $white;
+  // background-image: url(../../../assets/tlo.jpg);
+  // background-position-y: 98%;
+  // background-size: 100%;
+  background-blend-mode: saturation;
+}
+.mat-drawer-backdrop.mat-drawer-shown{
+  background-color: rgba($contrast, .6);
+}
+
+

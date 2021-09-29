@@ -6,6 +6,7 @@
   background-color: $contrast;
   width: 100%;
   height: 90vh;
+  position: relative;
   & .cover-h{
     position: absolute;
     bottom: 0;
@@ -13,5 +14,20 @@
     & h1,h2{
       color: $white;
     }
+  }
+  @include respond(tab-land){
+  height: 45vh;
+  }
+
+  @include respond(phone){
+    background-color: $contrast;
+    height: 268px;
+    width: 100%;
+  & .cover-h{
+    left: 0;
+    & h1,h2{
+      color: $white;
+    }
+  }
   }
 }

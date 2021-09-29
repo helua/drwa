@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -25,16 +25,20 @@ export class NavComponent implements OnInit {
     handleScroll(){
       const windowScroll = window.pageYOffset;
       const menu = document.getElementById("nav-main") as HTMLElement;
+      const cont = document.getElementById("nav-main-container") as HTMLElement;
+      const ul = document.getElementById("nav-main").children[0] as HTMLElement;
+
+
       if(windowScroll >= 160){
         this.onScroll = true;
-        console.log(windowScroll, this.onScroll)
         menu.style.top = "0";
+        cont.style.height = "58.4px";
+        ul.style.fontSize = "1.15rem";
       } else {
         this.onScroll = false;
-        console.log(windowScroll, this.onScroll)
         menu.style.top = "10px";
-
-
+        cont.style.height = "86px";
+        ul.style.fontSize = "1.3rem";
       }
     }
 

@@ -1,0 +1,35 @@
+<div class="mobile">
+  <ul>
+    <li>
+      <!-- <mat-icon (click)="sidenav.toggle()">menu</mat-icon> -->
+      <fa-icon [icon]="menuIcon" (click)="sidenav.toggle()"></fa-icon>
+    </li>
+    <li><a href="https://www.facebook.com/drwa" target="_blank">
+      <!-- <i class="fa fa-facebook" aria-hidden="true"></i> -->
+      <fa-icon [icon]="facebookIcon"></fa-icon>
+
+    </a></li>
+    <li><a href="https://www.instagram.com/drwa" target="_blank">
+      <!-- <i class="fa fa-instagram" aria-hidden="true"></i> -->
+      <fa-icon [icon]="instagramIcon"></fa-icon>
+
+    </a></li>
+  </ul>
+  </div>
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <a (click)="sidenav.toggle()" mat-list-item routerLink="/ciesielstwo" routerLinkActive="active">O nas</a>
+          <a (click)="sidenav.toggle()" mat-list-item routerLink="/warsztaty" routerLinkActive="active">Warsztaty</a>
+          <a (click)="sidenav.toggle()" mat-list-item routerLink="/realizacje" routerLinkActive="active">Realizacje</a>
+          <a (click)="sidenav.toggle()" mat-list-item routerLink="/wiedza" routerLinkActive="active">Wiedza</a>
+          <a (click)="sidenav.toggle()" mat-list-item routerLink="/kontakt" routerLinkActive="active">Kontakt</a>
+
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="router-wrapper">
+          <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

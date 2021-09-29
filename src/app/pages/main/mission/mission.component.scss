@@ -1,30 +1,43 @@
-@import './../../../../sass/styles';
+@import '../../../../sass/styles';
 
 
 
 .mission{
-  width: 100%;
-  margin-top: 5rem;
+  width: 73%;
+  margin: 5rem auto 0;
 }
 h2{
   text-align: center;
 }
-.col-2
-{
+.col{
   display: inline-block;
+  @include respond(phone){
+    display: block;
+  }
+}
+.col-image
+{
   background-color: $contrast;
-  margin-left: 18%;
-  width: 40%;
-  height: 400px;
+  width: 55%;
+  height: 390px;
+  @include respond(phone){
+    margin-left: 0%;
+    width: 100%;
+    height: 300px;
+
+  }
 
 }
 
-.col-1{
-  display: inline-block;
-  width: 20%;
-  height: 400px;
+.col-text{
+  width: 41%;
   vertical-align: top;
-  margin-left: 4%;
+  margin-left: auto 4%;
+  @include respond(phone){
+    margin-left: 0%;
+    width: 100%;
+
+  }
 
 }
 

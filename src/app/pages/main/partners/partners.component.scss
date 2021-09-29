@@ -1,15 +1,39 @@
+@import '../../../../sass/styles';
+
 .partners{
   margin-top: 5rem;
   text-align: center;
+
+}
+
+  .partners-bar{
+      width: 100%;
+      height: 200px;
+      overflow-x: scroll;
+      display: flex;
+      scrollbar-width: none;
+      @include respond(tab-port){
+        scrollbar-width: auto;
+      }
+
 }
 
 .col{
-  width: 15%;
-  margin-left: 5%;
+  width: 30%;
+  margin-right: 15%;
   display: inline-block;
+  &:first-child{
+    margin-left: 10%;
 
+  }
+  @include respond(tab-port){
+    width: 24%;
+  }
+  @include respond(phone){
+    width: 34%;
+  }
   & span{
-    font-size: 70px;
+    font-size: 75px;
   }
 }
 
