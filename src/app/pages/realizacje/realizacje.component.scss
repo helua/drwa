@@ -17,6 +17,7 @@
     width: 39%;
     height: 89%;
     overflow: hidden;
+
     & h2{
       margin-top: $gap;//decoration
       font-size: 1.6rem;
@@ -36,7 +37,20 @@
   }
   & .holder-slides{
     width: 60%;
+
   }
+  @include respond(tab-port){
+    width: 100%;
+    height: auto;
+    & .holder-slides{
+      width: 100%;
+      float: none;
+    }
+    & .holder-info{
+      width:65%;
+    }
+
+    }
 }
 
 .holder:nth-child(odd){

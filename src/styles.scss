@@ -7,12 +7,17 @@ body{
     font-weight: 600;
     letter-spacing: .1rem;
     margin: 0px;
-    background-color: $white;
     box-sizing: content-box;
-    background-image: url(assets/tlo.jpg);
     background-position-y: 98%;
     background-size: 100%;
-    background-blend-mode: saturation;
+    background-color: $white;
+    background-image: url(assets/tloo.png);
+    // background-blend-mode: saturation;
+    // @include respond(phone){
+    //   background-image: none;
+    //   background-blend-mode: none;
+    // }
+
 
     & ::selection{
         background-color: $mild;
@@ -29,25 +34,7 @@ a{
   }
 }
 
-p{
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  letter-spacing: .13rem;
-  word-spacing: .23rem;
-  font-weight: 300;
-  @include respond(tab-port){
-    font-size: 1.15rem;
-  }
-  @include respond(phone){
-    font-size: 1rem;
-    line-height: 1.3rem;
-    word-spacing: .1rem;
-    font-weight: 100;
-  }
-}
-h2{
-  padding-bottom: 5vh;
-}
+
 
 .router-wrapper{
   margin: 86px 0 70rem 0;
@@ -68,10 +55,30 @@ p, h1, h2, ol{
   padding: 0 1rem;
 
 }
+h1{
+  margin-top: 18vh;}
+h2{
+  padding-bottom: 5vh;
+}
 ul{
   font-size: 1.3rem;
 }
 
-
+p{
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: .13rem;
+  word-spacing: .23rem;
+  font-weight: 300;
+  @include respond(tab-port){
+    font-size: 1.15rem;
+  }
+  @include respond(phone){
+    font-size: 1rem;
+    line-height: 1.3rem;
+    word-spacing: .1rem;
+    font-weight: 200;
+  }
+}
 
 

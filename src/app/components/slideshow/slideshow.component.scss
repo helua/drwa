@@ -5,6 +5,9 @@
 /* Slideshow container */
 .slideshow-onclick {
   width: 540px;
+  @include respond(tab-land){
+    width: 95%;
+  }
   position: relative;
   margin: 2rem auto;
 }
@@ -12,10 +15,14 @@
 /* Hide the images by default */
 .mySlides{
   display: none;
-
   & img{
     height: 23rem;
   }
+  @include respond(tab-port){
+    & img{
+      height: auto;
+    }
+}
 }
 
 /* Next & previous buttons */
