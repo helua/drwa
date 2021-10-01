@@ -8,7 +8,7 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="event"]{eventStart, eventEnd, title, slug, mainImage, categories, "organiser": organiser->name} | order(title asc)';
+  const query = '*[_type=="event"]{eventStart, eventEnd, title, slug, mainImage, "categories": categories[]->title, "organiser": organiser->name} | order(title asc)';
   console.log(query);
   const events = await sanity.fetch(query).then((results) => {
     const allEvents = results.map((event) => {

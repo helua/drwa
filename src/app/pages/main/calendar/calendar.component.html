@@ -1,8 +1,20 @@
 <div class="section calendar">
+
   <h2>kalendarz</h2>
 
   <ul *ngIf="events | async as events; else loadingBlock">
-    <li *ngFor="let event of events">{{ event.title }}, {{ event.start | date }} - {{ event.end | date}}, organizator: {{ event.organiser }} </li>
+    <li *ngFor="let event of events">
+      <div class="decorator"></div>
+      <div class="image-wrapper">
+        <img [src]="event.image" alt="">
+        <div *ngFor="let category of event.categories" class="category-label">{{ category }}</div>
+        <caption> organizator: {{ event.organiser }}</caption>
+      </div>
+      <h3>{{ event.title }}</h3>
+      <p class="date">{{ event.start | date }} <br> {{ event.end | date}}</p>
+
+      <app-button text="Zapisy"></app-button>
+    </li>
   </ul>
 
   <ng-template #loadingBlock>

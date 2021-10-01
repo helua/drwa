@@ -51,14 +51,19 @@ a{
   }
 }
 
-p, h1, h2, ol{
+p, h1, h2, h3, ol{
   padding: 0 1rem;
+
 
 }
 h1{
   margin-top: 18vh;}
 h2{
   padding-bottom: 5vh;
+}
+h3{
+  font-size: 1.4rem;
+  line-height: 1.7rem;
 }
 ul{
   font-size: 1.3rem;
@@ -74,10 +79,10 @@ p{
     font-size: 1.15rem;
   }
   @include respond(phone){
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.3rem;
     word-spacing: .1rem;
-    font-weight: 200;
+    font-weight: 300;
   }
 }
 
