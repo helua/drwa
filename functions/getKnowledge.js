@@ -9,7 +9,7 @@ const sanity = sanityClient({
 });
 
 exports.handler = async () => {
-  const query = '*[_type=="post" && "zapowiedź" in categories[]->title || "relacja" in categories[]->title ]{title, slug, _createdAt, mainImage, "author": author->name, "categoryTitles": categories[]->title}'
+  const query = '*[_type=="post" && "wiedza" in categories[]->title]{title, slug, _createdAt, mainImage, "author": author->name, "categoryTitles": categories[]->title}'
   console.log(query);
   const posts = await sanity.fetch(query).then((results) => {
     const allPosts = results.map((post) => {

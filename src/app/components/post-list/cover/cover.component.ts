@@ -18,9 +18,7 @@ export class CoverComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked(): void{
-    console.log(this.post + '  hejkaaaaa')
     this.categories = this.post.categories;
-    console.log(this.categories);
   }
 
 }

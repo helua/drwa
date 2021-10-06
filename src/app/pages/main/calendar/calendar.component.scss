@@ -2,9 +2,8 @@
 
 .calendar{
   .decorator{
-    height: 50px;
-    border-bottom: 6px dashed #71677c;
-    border-radius: 42px;
+    height: 10px;
+    border-bottom: 20px dotted #71677c;
     width: 100%;
   }
   & h2{
@@ -14,59 +13,55 @@
     text-align: left;
     font-size: .8rem;
     list-style-type: none;
-  & li{
-    width: 256px;
-    display: inline-block;
-    margin-right: 10%;
-    vertical-align: top;
-    background-color: $white ;
-    // border-top: 6px dashed $mild2;
-    & h3{
-      font-size: 1.2rem;
-    }
-    & p{
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-      background-color: $white;
-
-    }
-  }
-
-   & .image-wrapper{
-    margin-top: 2rem;
-    position: relative;
-    contain: content;
-    height: 180px;
-    & img{
-      width: 100%;
-      filter: sepia(30%) brightness(2);
-
-    }
-
-    & caption{
-      width: 100%;
-      background-color: $mild2;
-      color: $white;
-      padding: .5rem 0;
-      position: absolute;
-      bottom: 5%;
-      left: 15%;
-      opacity: .9;
-    }
-    & .category-label{
-      position: absolute;
-      background-color: $color;
-      color: $neutral;
-      border-radius: 2px;
-      font-size: .9rem;
-      padding: 3px;
+    & li{
+      width: 256px;
       display: inline-block;
-      margin: 2px;
-      top: 4%;
-      left: 0;
+      margin-right: 5%;
+      vertical-align: top;
+      background-color: $white ;
+      border: 1px solid $mild;
+      border-radius: 5px;
+      & h3{
+        font-size: 1.2rem;
+      }
+      & p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        background-color: $white;
 
+      }
+      & .image-wrapper{
+        margin-top: 2rem;
+        position: relative;
+        contain: content;
+        height: 180px;
+        & img{
+          width: 100%;
+          filter: sepia(87%) brightness(1.5);
+
+        }
+      }
+
+        & caption{
+          width: 100%;
+          background-color: $mild2;
+          color: $white;
+          position: absolute;
+          bottom: 5%;
+          opacity: .9;
+        }
+        & .category-label{
+          position: absolute;
+          background-color: $mild;
+          color: $contrast;
+          border-radius: 2px;
+          font-size: .9rem;
+          padding: 3px;
+          display: inline-block;
+          margin: 2px;
+          top: 4%;
+          left: 0;
+        }
     }
   }
-  }
-
 }

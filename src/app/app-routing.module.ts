@@ -6,7 +6,7 @@ import { MainComponent } from './pages/main/main.component';
 import { KontaktComponent } from './pages/kontakt/kontakt.component';
 import { RealizacjeComponent } from './pages/realizacje/realizacje.component';
 import { WiedzaComponent } from './pages/wiedza/wiedza.component';
-import { PostComponent } from './pages/warsztaty/post/post.component';
+import { PostComponent } from './components/post-list/post/post.component';
 
 
 const routes: Routes = [

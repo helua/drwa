@@ -13,8 +13,8 @@ import { Post } from './models/Post';
 export class EventsService {
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('/.netlify/functions/getPosts', {
+  getPosts(feed): Observable<Post[]> {
+    return this.http.get<Post[]>('/.netlify/functions/get'+feed, {
       headers: {
         'Content-Type': 'application/json',
       },
